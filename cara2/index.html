@@ -29,8 +29,8 @@ function draw() {
   //el tercer paràmetre és l'amplada de la cara
   //el quart paràmetre és l'alçada de la cara
   //temblar esta sumat a l'amplada i l'alçada de la cara i canviara aleatoriament entre 10 y 50 pixels
-  fill(42, 31-h, 13+h);//color de ulls
-  ellipse(windowWidth/2-70,windowHeight/2-60,50,50);//ull dret
+  fill(42+h*2, 31, 13);//color de ulls
+  ellipse(windowWidth/2-70+h,windowHeight/2-60,50,50);//ull dret
   ellipse(windowWidth/2+70,windowHeight/2-60,50,50);//ull esquerra
   arc(windowWidth/2,windowHeight/2+90,100,50+h,0,PI);//boca
 }
