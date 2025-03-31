@@ -1,6 +1,9 @@
 
 
 
+
+
+
 <html>
   <head>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.2/p5.min.js" integrity="sha512-1YMgn4j8cIL91s14ByDGmHtBU6+F8bWOMcF47S0cRO3QNm8SKPNexy4s3OCim9fABUtO++nJMtcpWbINWjMSzQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -40,7 +43,7 @@ function draw() {
  sinus=sin(frameCount * 0.1);//la variable sinus crea numeros entre -1 i +1
   //frameCount esta contant els fotogrames i fa 60 a sinus per segon
   //això vol dir 60 numeros entre -1 i 1 ordenats per segon
-  let movsinus=map(sinus,-1,1,0,255);
+  let movsinus=map(sinus,-1,1,0,20);
   //converteix els numeros entre -1 i +1 donaran numeros proporcionals
 //entre 0 50 
   let vol=mic.getLevel();
@@ -59,12 +62,16 @@ function draw() {
   ellipse(windowWidth/2-70,windowHeight/2-60,50-h,50-h+movsinus*2);// ull dret
   ellipse(windowWidth/2+70,windowHeight/2-60-h,50,50+h+movsinus*2);// ull esquerra
   arc(windowWidth/2,windowHeight/2+90,100,50+h,0,PI);// boca
-   noStroke();
-  fill(255, 255, 255);//color blanc de les ales 
-  ellipse(60,40,20,20);//ala blanca de la dreta
-  ellipse(40,60,20,20);//ala blanca de la esquerra
-    fill(0, 0, 0);//color negre
+  fill(0, 0, 0);//color negre
   ellipse(50,50,20,20);//cos del mosquit negre de forma rodona 20 pixels ample i 20 pixels alt i situat a 50 pixels de la cantonada superior esquerra
+  fill(255, 255, 255);//color blanc de les ales 
+  ellipse(60,40,25,25);//ala blanca de la dreta
+  ellipse(40,60,25,25);//ala blanca de la esquerra
+  strokeWeight(5);
+  noFill();
+  line(windowWidth/2-100,windowHeight/2-100,windowWidth/2-10,windowHeight/2-110);
+  arc(windowWidth/2+100,windowHeight/2-100,80,30+h,PI,0);// cella
+  
 }
        /* Funció per canviar el color de fons:
        Utilitza random() per generar components RGB aleatoris dins d'un interval.
