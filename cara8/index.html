@@ -26,6 +26,7 @@ let mic;
         bgColor = color(200, 220, 255)
 }
 function draw() {
+  let parpelleig = frameCount % 60 < 5;
    t += 0.01;
         // Incrementa la variable 't' per fer que el 'noise()' canviï progressivament.
 
@@ -59,9 +60,15 @@ function draw() {
   // el tercer paràmetre es l'amplada de la cara
   // el quart és l'alçada de la cara
   // temblar esta sumat a la amplada i alçada de la cara i canviara aleatoriament entre 10-50 pixels
+  if (parpelleig) {
+ fill(5, 23+h*2, 14);// color ulls
+  ellipse(windowWidth/2-70,windowHeight/2-60,50-h,10-h+movsinus*2);// ull dret
+  ellipse(windowWidth/2+70,windowHeight/2-60-h,50,10+h+movsinus*2);// ull esquerra
+     } if (parpelleig==false){
  fill(5, 23+h*2, 14);// color ulls
   ellipse(windowWidth/2-70,windowHeight/2-60,50-h,50-h+movsinus*2);// ull dret
   ellipse(windowWidth/2+70,windowHeight/2-60-h,50,50+h+movsinus*2);// ull esquerra
+  }
   arc(windowWidth/2,windowHeight/2+90,100,50+h,0,PI);// boca
   fill(0, 0, 0);//color negre
   ellipse(50,50,20,20);//cos del mosquit negre de forma rodona 20 pixels ample i 20 pixels alt i situat a 50 pixels de la cantonada superior esquerra
