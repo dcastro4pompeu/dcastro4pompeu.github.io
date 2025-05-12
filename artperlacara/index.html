@@ -153,14 +153,35 @@
       switch (dominant) {
         case 'happy':
           stroke(255,200,0); // groc
-          beginShape();
-          for (let a = 0; a < TWO_PI; a += PI/8) {
-            let r = 100 + 25 * sin(a * 8);
-            let x = VIRTUAL_W/2 + r * cos(a);
-            let y = VIRTUAL_H/2 + r * sin(a);
-            vertex(x, y); // vèrtex positiu
-          }
-          endShape(CLOSE);
+        beginShape();//cuerpo
+vertex(194, 798.1875);
+vertex(198, 764.1875);
+vertex(157, 741.1875);
+vertex(122, 704.1875);
+vertex(104, 642.1875);
+vertex(94, 601.1875);
+vertex(92, 556.1875);
+vertex(94, 499.1875);
+vertex(106, 424.1875);
+vertex(120, 354.1875);
+vertex(151, 288.1875);
+vertex(178, 253.1875);
+vertex(212, 219.1875);
+vertex(259, 212.1875);
+vertex(309, 218.1875);
+vertex(337, 235.1875);
+vertex(368, 254.1875);
+vertex(396, 291.1875);
+vertex(440, 351.1875);
+vertex(487, 442.1875);
+vertex(518, 526.1875);
+vertex(543, 604.1875);
+vertex(546, 651.1875);
+vertex(534, 673.1875);
+vertex(523, 695.1875);
+vertex(476, 732.1875);
+vertex(490, 794.1875);    
+endShape(CLOSE);
           break;
 
         case 'sad':
